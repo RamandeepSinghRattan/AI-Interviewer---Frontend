@@ -1,0 +1,101 @@
+
+a{
+  text-decoration: none;
+}
+
+.box h1{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ff8f2c;;
+  
+}
+
+.box h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ff8f2c;;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+
+.box p {
+  font-size: 18px; 
+  font-weight: 400;
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 20px; 
+}
+
+.box button {
+  padding: 12px 20px;
+  background-color: #e67e22; 
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: auto; 
+}
+
+.box button:hover {
+  background-color: #c95e00;
+}
+
+#btn-container{
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+#delete-btn {
+  background-color: rgba(255, 0, 0, 0.76);
+  width: 60px;
+}
+
+#delete-btn:hover{
+  background-color: red;
+}
+
+@media (max-width: 768px) {
+  .box h1 {
+      font-size: 22px;
+  }
+
+  .box h2 {
+      font-size: 16px; 
+  }
+
+  .box p {
+      font-size: 14px; 
+  }
+
+  .box button {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .box h1 {
+      font-size: 20px; 
+  }
+
+  .box h2 {
+      font-size: 14px; 
+  }
+
+  .box p {
+      font-size: 12px; 
+  }
+
+  .box button {
+      font-size: 12px; 
+  }
+}

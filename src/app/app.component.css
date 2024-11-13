@@ -1,0 +1,8 @@
+*{
+    box-sizing: border-box;
+    background-color: black;
+}
+
+#main{
+    margin-top: 75px;
+}

@@ -1,0 +1,165 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+ body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000; 
+    color: #ECF0F1; 
+}
+
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; 
+    color: #ECF0F1;
+    padding: 20px;
+}
+
+
+h1 {
+    font-size: 45px; 
+    font-weight: 800;
+    color: #ff9800; 
+    margin-bottom: 30px; 
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-out; 
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+#box {
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    animation: slideUp 0.5s ease-out; 
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+mat-form-field {
+    width: 100%;
+    margin-bottom: 20px; 
+    transition: transform 0.3s ease;
+}
+
+mat-label {
+    color: #000000; 
+}
+
+mat-form-field input:focus {
+    border-color: #ff9800;
+    box-shadow: 0 0 5px rgba(255, 152, 0, 0.7);
+}
+
+button {
+    width: 60%; 
+    background: linear-gradient(135deg, #ff9800, #e65100); 
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #e65100;
+    transform: translateY(-5px); 
+}
+
+
+.register-link {
+    margin-top: 20px;
+}
+
+.register-link a {
+    color: #ebeff3;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+    color: #ffa500;
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px; 
+    }
+
+    #box {
+        width: 90%; 
+        padding: 20px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .register-link a {
+        font-size: 14px; 
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px; 
+    }
+
+    #box {
+        width: 100%; 
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px; 
+    }
+
+    .register-link a {
+        font-size: 12px; 
+    }
+}

@@ -1,0 +1,14 @@
+<a class="box" routerLink="view/{{session?.sessionId}}">
+    <h1>Interview for {{session?.jobRole}}</h1>
+    <h2>Skills: {{session?.skills}}</h2>
+    <p>Experience:
+        {{ session?.experience === 0 ? 'fresher' : session?.experience }}
+        {{ session?.experience === 0 ? '' : (session?.experience === 1 ? 'year' : 'years') }}
+    </p>
+    <div id="btn-container">
+    <button>View</button>
+    <button mat-fab id="delete-btn" (click)="deleteSession($event,session?.sessionId)">
+        <mat-icon>delete</mat-icon>
+    </button>
+</div>
+</a>

@@ -1,0 +1,15 @@
+<div id="container">
+    <h1 class="page-heading">Your Interview Practice Hub</h1>
+
+    <section id="part-one">
+        <div class="box create-session">
+            <h1>Create New Session</h1>
+            <p>Start a new interview session with an AI assistant to practice your skills, get feedback, and improve
+                your performance.</p>
+            <button (click)="interviewStart()">Start Now</button>
+        </div>
+        <div class="box" *ngFor="let interviewsession of userSessions?.interviewSessions">
+            <app-session-card [session]="interviewsession" (sessionDeleted)="onSessionDeleted($event)"></app-session-card>
+        </div>
+    </section>
+</div>

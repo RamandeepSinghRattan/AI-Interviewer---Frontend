@@ -1,0 +1,41 @@
+<div id="main" class="container">
+    <h1>YOUR INTERVIEW SESSION</h1>
+    
+   
+    <div class="section">
+    </div>
+    
+    <h2>Interview for {{sessionDetails?.jobRole}}</h2>
+
+    <div class="section">
+        <h3>Job Description: {{ sessionDetails?.jobDescription }}</h3>
+        <h3>Experience:
+            {{ sessionDetails?.experience === 0 ? 'fresher' : sessionDetails?.experience }}
+            {{ sessionDetails?.experience === 0 ? '' : (sessionDetails?.experience === 1 ? 'year' : 'years') }}
+        </h3>
+    </div>
+
+
+    <div class="section">
+        <h3 id="skills">Skills:</h3>
+        <ul>
+            <li *ngFor="let skill of sessionDetails?.skills; let last = last">
+                {{ skill }}<span *ngIf="!last">, </span>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="section">
+        <h3>Questions & Answers:</h3>
+        <div *ngFor="let qa of sessionDetails?.questionAnswers" class="qa-item">
+            <div class="question">
+                <strong>Question: </strong>{{ qa?.question }}
+            </div>
+            <div class="answer">
+                <strong>Answer: </strong>{{ qa?.answer }}
+            </div>
+        </div>
+    </div>
+
+</div>

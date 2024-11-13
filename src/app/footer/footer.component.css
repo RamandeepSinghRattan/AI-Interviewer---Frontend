@@ -1,0 +1,43 @@
+
+#footer {
+    background-color: #000000;
+    color: #ddd;
+    padding: 10px 20px;
+    text-align: center;
+    border-top: 4px solid #444;
+    font-family: Arial, sans-serif;
+    margin-top: 40px;
+}
+
+.footer-content h1 {
+    font-size: 28px;
+    margin: 0;
+    color: #f1f1f1;
+}
+
+.footer-content p {
+    font-size: 14px;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.contact-info a {
+    color: #4db8ff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    color: #777;
+    margin: 0;
+}

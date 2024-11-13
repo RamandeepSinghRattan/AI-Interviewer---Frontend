@@ -1,0 +1,26 @@
+<div *ngIf="!sessionComplete" id="question-container">
+    <h1>Welcome, I'm Your AI Interviewer</h1>
+    <h3>Question</h3>
+    <p class="typing">{{ currentQuestion }}</p>
+
+    <form [formGroup]="interviewForm" (ngSubmit)="submitAnswer()" id="answer-form">
+        <label for="answer">Your Answer:</label>
+        <input id="answer" formControlName="answer" placeholder="Type your answer here">
+        <button type="button" (click)="voice()" id="voice-btn"> Click to speak</button>
+        <button type="submit" class="submit-button" [disabled]="!interviewForm.valid">
+            Submit Answer
+        </button>
+    </form>
+</div>
+
+<div *ngIf="sessionComplete" id="session-complete">
+    <h2>Session Completed</h2>
+
+    <button (click)="saveSession()">Save Session</button>
+    <button (click)="retrySession()">Retry Session</button>
+
+    <div *ngIf="feedback" class="feedback-section">
+        <h3>Session Feedback</h3>
+        <p>{{ feedback }}</p>
+    </div>
+</div>

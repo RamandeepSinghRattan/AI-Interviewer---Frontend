@@ -1,0 +1,60 @@
+<div id="main">
+    <h1>Register with Ai Interviewer</h1>
+
+    <form [formGroup]="registerForm" (ngSubmit)="submit()">
+    
+        <mat-form-field class="example-full-width">
+            <mat-label>Enter your name</mat-label>
+            <input matInput placeholder="name" formControlName="fullName" required>
+            <mat-error *ngIf="registerForm.get('fullName')?.hasError('required')">
+                Name is required
+            </mat-error>
+            <mat-error *ngIf="registerForm.get('fullName')?.hasError('pattern')">
+                Name should not contain numbers
+            </mat-error>
+            <mat-error *ngIf="registerForm.get('fullName')?.hasError('minlength')">
+                Name should be at least 3 characters long
+            </mat-error>
+        </mat-form-field>
+
+    
+        <mat-form-field class="example-full-width">
+            <mat-label>Enter your age</mat-label>
+            <input matInput type="number" placeholder="age" formControlName="age" required>
+            <mat-error *ngIf="registerForm.get('age')?.hasError('required')">
+                Age is required
+            </mat-error>
+            <mat-error *ngIf="registerForm.get('age')?.hasError('pattern')">
+                Age must be a valid number
+            </mat-error>
+            <mat-error *ngIf="registerForm.get('age')?.hasError('min')">
+                Age should not be less than 15
+            </mat-error>
+        </mat-form-field>
+
+       
+        <mat-form-field class="example-full-width">
+            <mat-label>Enter email</mat-label>
+            <input matInput type="email" placeholder="email" formControlName="email" required>
+            <mat-error *ngIf="registerForm.get('email')?.hasError('required')">
+                Email is required
+            </mat-error>
+            <mat-error *ngIf="registerForm.get('email')?.hasError('email')">Enter a valid email</mat-error>
+
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Enter password</mat-label>
+            <input matInput type="password" placeholder="password" formControlName="password" required>
+            <mat-error *ngIf="registerForm.get('password')?.hasError('required')">
+                Password is required
+            </mat-error>
+            <mat-error *ngIf="registerForm.get('password')?.hasError('pattern')">
+                Password must contain: 6+ characters, uppercase, lowercase, number, special
+                character
+            </mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" (click)='submit()'>Register</button>
+    </form>
+</div>

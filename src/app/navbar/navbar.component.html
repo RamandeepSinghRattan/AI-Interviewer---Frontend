@@ -1,0 +1,13 @@
+<div id="nav">
+    <img src="../../assets/images/Ai INterviewer.png" alt="AI Interviewer Logo" id="logo">
+    <div id="links-b">
+      <ul>
+        <li><a routerLink="">Home</a></li>
+        <li *ngIf="!isLogin"><a routerLink="login" (click)="clicked()">Create Session</a></li>
+        <li *ngIf="!isLogin"><a routerLink="login">Login</a></li>
+        <li *ngIf="isLogin"><a routerLink="sessions">Interview Sessions</a></li>
+        <li *ngIf="isLogin"><a routerLink="login" (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+  
